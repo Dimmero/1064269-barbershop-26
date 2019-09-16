@@ -5,24 +5,27 @@
   <title>HTML Academy: Барбершоп</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <img src="img/logo.svg" width="368" height="153" alt="Логотип барбершопа &laquo;Бородинский&raquo;">
-        <ul>
-          <li><a href="info.html">Информация</a></li>
-          <li><a href="news.html">Новости</a></li>
-          <li><a href="price-list.html">Прайс-лист</a></li>
-          <li><a href="shop.html">Магазин</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
-      <ul>
+  <header class="main-header">
+    <nav class="main-navigation">
+      <a class="main-header-logo">
+        <img src="img/logo.svg" width="368" height="153" alt="Логотип барбершопа &laquo;Бородинский&raquo;">
+      </a> 
+      <ul class="site-navigation">
+        <li><a href="info.html">Информация</a></li>
+        <li><a href="news.html">Новости</a></li>
+        <li><a href="price.html">Прайс-лист</a></li>
+        <li><a href="catalog.html">Магазин</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+      <ul class="user-navigation">
+        <!-- LOGIN FORM -->
         <li>
-          <button type="button">Войти</button>
+          <a class="login-link" href="">Вход</a>
         </li>
-       </ul>
-</header>
-<main>
+      </ul>
+    </nav>
+  </header>
+<main class="container">
   <h1>Барбершоп &laquo;Бородинский&raquo;</h1>
     <section>
       <h2>Преимущества</h2>
@@ -55,10 +58,12 @@
        </ul>
         <a href="news.html">Все новости</a>
     </section>
-    <section>
+    <section class="gallery">
       <h2>Фотогалерея</h2>
-        <figure>
-          <img src="img/gallery.jpg" alt="" width="" height="">
+        <figure class="gallery-content">
+          <a href="#">
+            <img src="img/gallery.jpg" alt="Интерьер" width="286" height="164">
+          </a>  
         </figure>
         <button type="button">Назад</button>
         <button type="button">Вперёд</button>
@@ -74,9 +79,21 @@
       <a href="map.html">Как проехать</a>
       <a href="contacts.html">Обратная связь</a>
     </section>
-    <section>
+    <section class="appointment">
       <h2>Записаться</h2>
-      <p>Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+      <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+      <!-- Here is a FORM -->
+      <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
+        <label for="appointment-date">Дата</label>
+        <input type="text" name="date" id="appointment-date" value="" placeholder="08.10.2017">
+        <label for="appointment-time">Время</label>
+        <input type="text" name="time" id="appointment-time" value="" placeholder="10:00">
+        <label for="appointment-name">Ваше имя</label>
+        <input type="text" name="name" id="appointment-name" value="" placeholder="Борода">
+        <label for="appointment-tel">Телефон</label>
+        <input type="tel" name="tel" id="appointment-tel" value="" placeholder="+7 123 456-78-90">
+        <button class="button" type="submit">Отправить</button>
+      </form>  
     </section>
 </main>
 <footer>
