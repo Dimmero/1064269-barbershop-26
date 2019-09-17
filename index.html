@@ -117,15 +117,21 @@
   <p>Введите свой логин и пароль:</p>
   <form cloass="login-form" action="https://echo.htmlacademy.ru" method="post">
     <p>
-      <input class="login-icon-user" type="text" name="login" id="login-field" placeholder="Логин">
+      <label class="visually-hidden" for="user-login">Логин</label>
+      <input class="login-icon-user" type="text" name="login" id="user-login" placeholder="Логин">
     </p>
     <p>  
-      <input class="login-icon-password" type="password" name="password" id="password-field" placeholder="Пароль">
+      <label class="visually-hidden" for="user-password">Пароль</label>
+      <input class="login-icon-password" type="password" name="password" id="user-password" placeholder="Пароль">
     </p> 
     <p class="login-password-info">
+      <label for="login-checkbox">
       <input type="checkbox" name="remember">
+      Запомните меня
+      </label>
       <a class="restore" href="">Я забыл пароль!</a>
-    </p>  
+    </p>
+    <button class="modal-close" type="button">Закрыть</button>  
   </form>  
   <button class="modal-close" type="button">Закрыть</button>
 </section>
