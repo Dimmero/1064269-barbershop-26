@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Барбершоп</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="inner-page">
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header-logo">
-        <img src="img/small-logo.svg" width="368" height="153" alt="Логотип барбершопа &laquo;Бородинский&raquo;">
+        <img src="img/small-logo.svg" width="111" height="24" alt="Логотип барбершопа &laquo;Бородинский&raquo;">
       </a> 
       <ul class="site-navigation">
         <li><a href="info.html">Информация</a></li>
         <li><a href="news.html">Новости</a></li>
         <li><a href="price.html">Прайс-лист</a></li>
-        <li><a href="catalog.html">Магазин</a></li>
+        <li><a class="site-navigation-current" href="catalog.html">Магазин</a></li>
         <li><a href="contacts.html">Контакты</a></li>
       </ul>
       <ul class="user-navigation">
@@ -37,6 +40,7 @@
     <form class="filter" method="get" action="https://echo.htmlacademy.ru">
       <fieldset>
         <legend>Производители:</legend>
+        <ul>
         <li class="filter-option">
           <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="baxter-of-california" id="filter-baxter-of-california" checked>
           <label for="filter-baxter-of-california">
@@ -61,9 +65,11 @@
           <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="american-crew" id="filter-american-crew" checked>
           <label for="filter-american-crew">
           American Crew</label></li>  
+        </ul>
       </fieldset>
       <fieldset>
         <legend>Группы товаров</legend>
+        <ul>
         <li class="filter-option">
           <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" id="filter-shave" value="shaving">
           <label for="filter-shave">
@@ -82,6 +88,7 @@
           Аксессуары
         </label>
         </li>
+      </ul>
       </fieldset> 
       <button class="filter-button button" type="submit">Показать</button> 
     </form>  
@@ -92,7 +99,6 @@
         <li class="catalog-item">
           <a href="catalog-item.html">
             <h3>
-              Набор для путешествий &laquo;Baxter of California&raquo;
               <span class="catalog-category">Набор для путешествий</span>
               <span class="catalog-item-title">&laquo;Baxter of California&raquo;</span>
             </h3>
@@ -110,7 +116,6 @@
       <li class="catalog-item">
         <a href="catalog-item.html">
           <h3>
-            Увлажняющий кондиционер &laquo;Baxter of California&raquo;
             <span class="catalog-category">Увлажняющий кондиционер</span>
             <span class="catalog-item-title">&laquo;Baxter of California&raquo;</span>
           </h3>
@@ -127,7 +132,6 @@
         <li class="catalog-item">
           <a href="catalog-item.html">
             <h3>
-              Гель для волос &laquo;Suavecito&raquo;
               <span class="catalog-category">Гель для волос</span>
               <span class="catalog-item-title">&laquo;Suavecito&raquo;</span>
             </h3>
@@ -144,7 +148,6 @@
         <li class="catalog-item">
           <a href="catalog-item.html">
             <h3>
-              Глина для укладки волос &laquo;American Crew&raquo;
               <span class="catalog-category">Глина для укладки волос</span>
               <span class="catalog-item-title">&laquo;American Crew&raquo;</span>
             </h3>
@@ -161,7 +164,6 @@
         <li class="catalog-item">
           <a href="catalog-item.html">
             <h3>
-            Гель для волос &laquo;American Crew&raquo;
               <span class="catalog-category">Гель для волос</span>
               <span class="catalog-item-title">&laquo;American Crew&raquo;</span>
             </h3>
@@ -178,7 +180,6 @@
         <li class="catalog-item">
           <a href="catalog-item.html">
             <h3>
-            Набор для бритья &laquo;Baxter of California&raquo;
               <span class="catalog-category">Набор для бритья</span>
               <span class="catalog-item-title">&laquo;Baxter of California&raquo;</span>
             </h3>
@@ -192,45 +193,46 @@
           </p>
         </li>
       </ul>
-      <ul>
-        <li><a href="#">1</a></li>
-        <li><a>2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
+      <ul class="pagination-list">
+        <li class="pagination-item"><a href="#">1</a></li>
+        <li class="pagination-item-current"><a>2</a></li>
+        <li class="pagination-item"><a href="#">3</a></li>
+        <li class="pagination-item"><a href="#">4</a></li>
       </ul>
   </section>
 </main>
-<footer>
-  <p>Барбершоп &laquo;Бородинский&raquo;<br>
+<footer class="main-footer">
+  <p class="footer-contacts">Барбершоп &laquo;Бородинский&raquo;<br>
      Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
   <a href="map.html">Как нас найти</a><br>
   Телефон: +7(495)666-02-66</p>
-  <div>
-    <p>Давайте дружить</p>
+  <div class="footer-social">
+    <b>Давайте дружить</b>
       <ul>
-        <li><a href="#">Вконтакте</a></li>
-        <li><a href="#">Фейсбук</a></li>
-        <li><a href="#">Инстаграм</a></li>
+        <li><a class="social-button" href="#">Вконтакте</a></li>
+        <li><a class="social-button" href="#">Фейсбук</a></li>
+        <li><a class="social-button" href="#">Инстаграм</a></li>
       </ul>
   </div>
-  <p>Разработано
-  <a href="https://htmlacademy.ru">HTML Academy</a></p>
+  <p class="footer-copyright">
+    <b>Разработано</b>
+  <a class="button" href="https://htmlacademy.ru">HTML Academy</a></p>
 </footer>
-<section>
+<section class="modal modal-login">
   <h2>Личный кабинет</h2>
-  <p>Введите свой логин и пароль:</p>
+  <p>Введите пожалуйста свой логин и пароль:</p>
   <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
     <p>
       <label class="visually-hidden" for="user-login">Логин</label>
-      <input class="login-icon-user" type="text" name="login" id="user-login" placeholder="Логин">
+      <input class="login-icon-user" type="text" name="login" id="user-login" placeholder="email@example.com">
     </p>
     <p>  
       <label class="visually-hidden" for="user-password">Пароль</label>
-      <input class="login-icon-password" type="password" name="password" id="user-password" placeholder="Пароль">
+      <input class="login-icon-password" type="password" name="password" id="user-password" placeholder="........">
     </p> 
     <p class="login-password-info">
       <label for="login-checkbox">
-      <input type="checkbox" name="remember" id="login-checkbox">
+      <input type="checkbox" name="remember">
       Запомните меня
       </label>
       <a class="restore" href="">Я забыл пароль!</a>

@@ -3,12 +3,15 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Барбершоп</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="inner-page">
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header-logo">
-        <img src="img/small-logo.svg" width="368" height="153" alt="Логотип барбершопа &laquo;Бородинский&raquo;">
+        <img src="img/small-logo.svg" width="111" height="24" alt="Логотип барбершопа &laquo;Бородинский&raquo;">
       </a> 
       <ul class="site-navigation">
         <li><a href="info.html">Информация</a></li>
@@ -33,23 +36,23 @@
       <li><a href="catalog-item.html">Средства для ухода</a></li>
       <li class="breadcrumbs-current">Набор для путешествий &laquo;Baxter of California&raquo;</li>
     </ul>
-  <section>
+  <section class="products-photos">
     <h2 class="visually-hidden">Изображение товара</h2>
-    <p>
-      <img src="img/item-1-big.jpg" width="486" height="524" alt="Фото всего набора Набор для путешествий &laquo;Baxter of California&raquo;">
+    <p class="products-photo-full">
+      <img src="img/item-1-big.jpg" width="460" height="498" alt="Фото всего набора Набор для путешествий &laquo;Baxter of California&raquo;">
     </p>
-    <ul>
-      <li><img src="img/item-1-small-1.jpg" width="166" height="175" alt="Фото в анфас набор для путешествий &laquo;Baxter of California&raquo;"></li>
-      <li><img src="img/item-1-small-2.jpg" width="166" height="175" alt="Фото в профиль набор для путешествий &laquo;Baxter of California&raquo;"></li>
-      <li><img src="img/item-1-small-3.jpg" width="166" height="175" alt="Фото отдельной части набор для путешествий &laquo;Baxter of California&raquo;"></li>
+    <ul class="product-photo-preview">
+      <li><img src="img/item-1-small-1.jpg" width="140" height="149" alt="Фото в анфас набор для путешествий &laquo;Baxter of California&raquo;"></li>
+      <li><img src="img/item-1-small-2.jpg" width="140" height="149" alt="Фото в профиль набор для путешествий &laquo;Baxter of California&raquo;"></li>
+      <li><img src="img/item-1-small-3.jpg" width="140" height="149" alt="Фото отдельной части набор для путешествий &laquo;Baxter of California&raquo;"></li>
     </ul>
   </section>
-  <section>
-    <h2 class="item-description">Описание товара</h2>
-    <p class="stock">Есть в наличии</p>
-    <p class="article">Артикул: Dexter-AE</p>
-    <p class="description">Travel Kit - необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится всё, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.</p>
-    <p class="item-price">
+  <section class="product-info">
+    <h2 class="product-description">Описание товара</h2>
+    <p class="product-availability">Есть в наличии</p>
+    <p class="product-article">Артикул: Dexter-AE</p>
+    <p class="product-text">Travel Kit - необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится всё, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.</p>
+    <p class="product-price">
       <b>2 900₽</b>
       <a class="button" href="#">Купить</a>
     </p>
@@ -63,33 +66,34 @@
     </ul>
   </section>
 </main>
-<footer>
-  <p>Барбершоп &laquo;Бородинский&raquo;<br>
+<footer class="main-footer">
+  <p class="footer-contacts">Барбершоп &laquo;Бородинский&raquo;<br>
      Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
   <a href="map.html">Как нас найти</a><br>
   Телефон: +7(495)666-02-66</p>
-  <div>
-    <p>Давайте дружить</p>
+  <div class="footer-social">
+    <b>Давайте дружить</b>
       <ul>
-        <li><a href="#">Вконтакте</a></li>
-        <li><a href="#">Фейсбук</a></li>
-        <li><a href="#">Инстаграм</a></li>
+        <li><a class="social-button" href="#">Вконтакте</a></li>
+        <li><a class="social-button" href="#">Фейсбук</a></li>
+        <li><a class="social-button" href="#">Инстаграм</a></li>
       </ul>
   </div>
-  <p>Разработано
-  <a href="https://htmlacademy.ru">HTML Academy</a></p>
+  <p class="footer-copyright">
+    <b>Разработано</b>
+  <a class="button" href="https://htmlacademy.ru">HTML Academy</a></p>
 </footer>
-<section>
+<section class="modal modal-login">
   <h2>Личный кабинет</h2>
-  <p>Введите свой логин и пароль:</p>
-  <form cloass="login-form" action="https://echo.htmlacademy.ru" method="post">
+  <p>Введите пожалуйста свой логин и пароль:</p>
+  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
     <p>
       <label class="visually-hidden" for="user-login">Логин</label>
-      <input class="login-icon-user" type="text" name="login" id="user-login" placeholder="Логин">
+      <input class="login-icon-user" type="text" name="login" id="user-login" placeholder="email@example.com">
     </p>
     <p>  
       <label class="visually-hidden" for="user-password">Пароль</label>
-      <input class="login-icon-password" type="password" name="password" id="user-password" placeholder="Пароль">
+      <input class="login-icon-password" type="password" name="password" id="user-password" placeholder="........">
     </p> 
     <p class="login-password-info">
       <label for="login-checkbox">
